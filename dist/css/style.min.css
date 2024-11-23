@@ -12698,7 +12698,7 @@ a.text-purple:focus,a.text-purple:hover{
     -moz-box-shadow:0 3px 9px 0 rgba(162,176,190,.15)
 }
 .sidebar-nav{
-    padding-top:30px
+    padding-top:1px
 }
 .sidebar-nav #sidebarnav .list-divider{
     height:1px;

@@ -61,24 +61,30 @@ if (!isset($_SESSION['usuario'])) {
                     <!-- Logo -->
                     <!-- ============================================================== -->
                     <div class="navbar-brand">
-                        <!-- Logo icon -->
-                        <a href="index.html">
-                            <b class="logo-icon">
-                                <!-- Dark Logo icon -->
-                                <img src="../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
-                                <!-- Light Logo icon -->
-                                <img src="../assets/images/logo-icon.png" alt="homepage" class="light-logo" />
-                            </b>
-                            <!--End Logo icon -->
-                            <!-- Logo text -->
-                            <span class="logo-text">
-                                <!-- dark Logo text -->
-                                <img src="../assets/images/logo-text.png" alt="homepage" class="dark-logo" />
-                                <!-- Light Logo text -->
-                                <img src="../assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
+                        <a href="index.php" style="display: flex; align-items: center; text-decoration: none;">
+                            <!-- Icon SVG -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0a2463" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+
+                            <!-- Espaçamento entre icone e escrita -->
+                            <a> </a>
+
+                            <!-- Brand Text -->
+                            <span style="
+                            font-size: 1.5rem;
+                            font-weight: bold;
+                            background: linear-gradient(135deg, #0a2463 0%, #247ba0 100%);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            background-clip: text;
+                            ">   
+                             MyPatrimônio
                             </span>
                         </a>
-                    </div>
+                        </div>
                     <!-- ============================================================== -->
                     <!-- End Logo -->
                     <!-- ============================================================== -->
@@ -106,7 +112,7 @@ if (!isset($_SESSION['usuario'])) {
                                 <form>
                                     <div class="customize-input">
                                         <input class="form-control custom-shadow custom-radius border-0 bg-white"
-                                            type="search" placeholder="Search" aria-label="Search">
+                                            type="search" placeholder="Pesquisar..." aria-label="Search">
                                         <i class="form-control-icon" data-feather="search"></i>
                                     </div>
                                 </form>
