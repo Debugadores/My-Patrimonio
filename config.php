@@ -3,7 +3,7 @@
 server with default setting (user 'root' with no password) */
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'vssql');
+define('DB_PASSWORD', 'eusouomestredosmagos');
 define('DB_NAME', 'MyPatrimonio');
  
 /* Attempt to connect to MySQL database */

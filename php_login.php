@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         $_SESSION["usuario"] = $usuario;
 
                                         // Redirecionar para a página principal
-                                        header("location: Principal/package/src/html/index.php");
+                                        header("location: html/index.php");
                                         exit;
                                     } else {
                                         $password_err = "A senha inserida não é válida.";

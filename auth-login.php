@@ -4,7 +4,7 @@ session_start();
  
 // Verifique se o usuário já está logado, se sim, redirecione-o para a página welcome.php
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: Principal/package/src/html/index.php");
+    header("location: html/index.php");
     exit;
 }
 
@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         $_SESSION["nome"] = $nome;
 
                                         // Redirecionar para página principal
-                                        header("location: Principal/package/src/html/index.php");
+                                        header("location: html/index.php");
                                         exit();
                                     } else {
                                         // Senha incorreta
