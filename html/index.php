@@ -104,10 +104,7 @@ if (!isset($_SESSION['usuario'])) {
                     <!-- toggle and nav items -->
                     <!-- ============================================================== -->
                     <ul class="navbar-nav float-left mr-auto ml-3 pl-1">
-    <!-- AQUI VAI FICAR O SEARCH --><!-- ============================================================== -->
-                        <!-- Search -->
-                        <!-- ============================================================== -->
-     <li class="nav-item d-none d-md-block">
+                        <li class="nav-item d-none d-md-block">
                             <a class="nav-link" href="javascript:void(0)">
                                 <form>
                                     <div class="customize-input">
@@ -280,218 +277,218 @@ if (!isset($_SESSION['usuario'])) {
                         <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="index.php"
                                 aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
                                     class="hide-menu">Dashboard</span></a></li>
-                        <li class="list-divider"></li>
-                        <li class="nav-small-cap"><span class="hide-menu">Cadastros</span></li>
+                                    <li class="list-divider"></li>
+                
+                        <!-- Seção Clientes -->
+                <li class="nav-small-cap"><span class="hide-menu">Clientes</span></li>
+                
+                <li class="sidebar-item">
+                    <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                        <i data-feather="users" class="feather-icon"></i>
+                        <span class="hide-menu">Gerenciar Clientes</span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse first-level base-level-line">
+                        <li class="sidebar-item">
+                            <a href="cadastro-cliente.php" class="sidebar-link">
+                                <span class="hide-menu">Novo Cliente</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="lista-clientes.php" class="sidebar-link">
+                                <span class="hide-menu">Lista de Clientes</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="importar-clientes.php" class="sidebar-link">
+                                <span class="hide-menu">Importar Clientes</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="categorias-clientes.php" class="sidebar-link">
+                                <span class="hide-menu">Categorias</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
 
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="#"
-                                aria-expanded="false"><i data-feather="user" class="feather-icon"></i><span
-                                    class="hide-menu">Clientes</span></a></li>
-                                    
+                <!-- Seção Vendas -->
+                <li class="list-divider"></li>
+                <li class="nav-small-cap"><span class="hide-menu">Vendas</span></li>
+                
+                <li class="sidebar-item">
+                    <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                        <i data-feather="shopping-cart" class="feather-icon"></i>
+                        <span class="hide-menu">Pedidos</span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse first-level base-level-line">
+                        <li class="sidebar-item">
+                            <a href="novo-pedido.php" class="sidebar-link">
+                                <span class="hide-menu">Novo Pedido</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="lista-pedidos.php" class="sidebar-link">
+                                <span class="hide-menu">Lista de Pedidos</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="orcamentos.php" class="sidebar-link">
+                                <span class="hide-menu">Orçamentos</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
 
-                        <li class="sidebar-item"> <a class="sidebar-link" href="ticket-list.html"
-                                aria-expanded="false"><i data-feather="tag" class="feather-icon"></i><span
-                                    class="hide-menu">Ticket List
-                                </span></a>
+                <li class="sidebar-item">
+                    <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                        <i data-feather="package" class="feather-icon"></i>
+                        <span class="hide-menu">Produtos</span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse first-level base-level-line">
+                        <li class="sidebar-item">
+                            <a href="cadastro-produto.php" class="sidebar-link">
+                                <span class="hide-menu">Novo Produto</span>
+                            </a>
                         </li>
-                        <!-- <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="app-chat.html"
-                                aria-expanded="false"><i data-feather="message-square" class="feather-icon"></i><span
-                                    class="hide-menu">Chat</span></a></li> -->
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="app-calendar.html"
-                                aria-expanded="false"><i data-feather="calendar" class="feather-icon"></i><span
-                                    class="hide-menu">Calendar</span></a></li>
+                        <li class="sidebar-item">
+                            <a href="lista-produtos.php" class="sidebar-link">
+                                <span class="hide-menu">Lista de Produtos</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="categorias-produtos.php" class="sidebar-link">
+                                <span class="hide-menu">Categorias</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="estoque.php" class="sidebar-link">
+                                <span class="hide-menu">Controle de Estoque</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
 
-                        <li class="list-divider"></li>
-                        <li class="nav-small-cap"><span class="hide-menu">Components</span></li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                                aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
-                                    class="hide-menu">Forms </span></a>
-                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><span
-                                            class="hide-menu"> Form Inputs
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="form-input-grid.html" class="sidebar-link"><span
-                                            class="hide-menu"> Form Grids
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="form-checkbox-radio.html" class="sidebar-link"><span
-                                            class="hide-menu"> Checkboxes &
-                                            Radios
-                                        </span></a>
-                                </li>
-                            </ul>
+                <!-- Seção Financeiro -->
+                <li class="list-divider"></li>
+                <li class="nav-small-cap"><span class="hide-menu">Financeiro</span></li>
+                
+                <li class="sidebar-item">
+                    <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                        <i data-feather="dollar-sign" class="feather-icon"></i>
+                        <span class="hide-menu">Caixa</span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse first-level base-level-line">
+                        <li class="sidebar-item">
+                            <a href="contas-receber.php" class="sidebar-link">
+                                <span class="hide-menu">Contas a Receber</span>
+                            </a>
                         </li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                                aria-expanded="false"><i data-feather="grid" class="feather-icon"></i><span
-                                    class="hide-menu">Tables </span></a>
-                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="table-basic.html" class="sidebar-link"><span
-                                            class="hide-menu"> Basic Table
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="table-dark-basic.html" class="sidebar-link"><span
-                                            class="hide-menu"> Dark Basic Table
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="table-sizing.html" class="sidebar-link"><span
-                                            class="hide-menu">
-                                            Sizing Table
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="table-layout-coloured.html" class="sidebar-link"><span
-                                            class="hide-menu">
-                                            Coloured
-                                            Table Layout
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="table-datatable-basic.html" class="sidebar-link"><span
-                                            class="hide-menu">
-                                            Basic
-                                            Datatables
-                                            Layout
-                                        </span></a>
-                                </li>
-                            </ul>
+                        <li class="sidebar-item">
+                            <a href="contas-pagar.php" class="sidebar-link">
+                                <span class="hide-menu">Contas a Pagar</span>
+                            </a>
                         </li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                                aria-expanded="false"><i data-feather="bar-chart" class="feather-icon"></i><span
-                                    class="hide-menu">Charts </span></a>
-                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="chart-morris.html" class="sidebar-link"><span
-                                            class="hide-menu"> Morris Chart
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="chart-chart-js.html" class="sidebar-link"><span
-                                            class="hide-menu"> ChartJs
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="chart-knob.html" class="sidebar-link"><span
-                                            class="hide-menu">
-                                            Knob Chart
-                                        </span></a>
-                                </li>
-                            </ul>
+                        <li class="sidebar-item">
+                            <a href="fluxo-caixa.php" class="sidebar-link">
+                                <span class="hide-menu">Fluxo de Caixa</span>
+                            </a>
                         </li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                                aria-expanded="false"><i data-feather="box" class="feather-icon"></i><span
-                                    class="hide-menu">UI Elements </span></a>
-                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="ui-buttons.html" class="sidebar-link"><span
-                                            class="hide-menu"> Buttons
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="ui-modals.html" class="sidebar-link"><span
-                                            class="hide-menu"> Modals </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="ui-tab.html" class="sidebar-link"><span
-                                            class="hide-menu"> Tabs </span></a></li>
-                                <li class="sidebar-item"><a href="ui-tooltip-popover.html" class="sidebar-link"><span
-                                            class="hide-menu"> Tooltip &
-                                            Popover</span></a></li>
-                                <li class="sidebar-item"><a href="ui-notification.html" class="sidebar-link"><span
-                                            class="hide-menu">Notification</span></a></li>
-                                <li class="sidebar-item"><a href="ui-progressbar.html" class="sidebar-link"><span
-                                            class="hide-menu">Progressbar</span></a></li>
-                                <li class="sidebar-item"><a href="ui-typography.html" class="sidebar-link"><span
-                                            class="hide-menu">Typography</span></a></li>
-                                <li class="sidebar-item"><a href="ui-bootstrap.html" class="sidebar-link"><span
-                                            class="hide-menu">Bootstrap
-                                            UI</span></a></li>
-                                <li class="sidebar-item"><a href="ui-breadcrumb.html" class="sidebar-link"><span
-                                            class="hide-menu">Breadcrumb</span></a></li>
-                                <li class="sidebar-item"><a href="ui-list-media.html" class="sidebar-link"><span
-                                            class="hide-menu">List
-                                            Media</span></a></li>
-                                <li class="sidebar-item"><a href="ui-grid.html" class="sidebar-link"><span
-                                            class="hide-menu"> Grid </span></a></li>
-                                <li class="sidebar-item"><a href="ui-carousel.html" class="sidebar-link"><span
-                                            class="hide-menu">
-                                            Carousel</span></a></li>
-                                <li class="sidebar-item"><a href="ui-scrollspy.html" class="sidebar-link"><span
-                                            class="hide-menu">
-                                            Scrollspy</span></a></li>
-                                <li class="sidebar-item"><a href="ui-toasts.html" class="sidebar-link"><span
-                                            class="hide-menu"> Toasts</span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="ui-spinner.html" class="sidebar-link"><span
-                                            class="hide-menu"> Spinner </span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="ui-cards.html"
-                                aria-expanded="false"><i data-feather="sidebar" class="feather-icon"></i><span
-                                    class="hide-menu">Cards
-                                </span></a>
-                        </li>
-                        <li class="list-divider"></li>
-                        <li class="nav-small-cap"><span class="hide-menu">Authentication</span></li>
+                    </ul>
+                </li>
 
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="authentication-login1.html"
-                                aria-expanded="false"><i data-feather="lock" class="feather-icon"></i><span
-                                    class="hide-menu">Login
-                                </span></a>
+                <li class="sidebar-item">
+                    <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                        <i data-feather="file-text" class="feather-icon"></i>
+                        <span class="hide-menu">Documentos Fiscais</span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse first-level base-level-line">
+                        <li class="sidebar-item">
+                            <a href="notas-fiscais.php" class="sidebar-link">
+                                <span class="hide-menu">Notas Fiscais</span>
+                            </a>
                         </li>
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link"
-                                href="authentication-register1.html" aria-expanded="false"><i data-feather="lock"
-                                    class="feather-icon"></i><span class="hide-menu">Register
-                                </span></a>
+                        <li class="sidebar-item">
+                            <a href="relatorios-fiscais.php" class="sidebar-link">
+                                <span class="hide-menu">Relatórios Fiscais</span>
+                            </a>
                         </li>
+                    </ul>
+                </li>
 
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                                aria-expanded="false"><i data-feather="feather" class="feather-icon"></i><span
-                                    class="hide-menu">Icons
-                                </span></a>
-                            <ul aria-expanded="false" class="collapse first-level base-level-line">
-                                <li class="sidebar-item"><a href="icon-fontawesome.html" class="sidebar-link"><span
-                                            class="hide-menu"> Fontawesome Icons </span></a></li>
-
-                                <li class="sidebar-item"><a href="icon-simple-lineicon.html" class="sidebar-link"><span
-                                            class="hide-menu"> Simple Line Icons </span></a></li>
-                            </ul>
+                <!-- Seção Relatórios -->
+                <li class="list-divider"></li>
+                <li class="nav-small-cap"><span class="hide-menu">Relatórios</span></li>
+                
+                <li class="sidebar-item">
+                    <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                        <i data-feather="bar-chart-2" class="feather-icon"></i>
+                        <span class="hide-menu">Relatórios</span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse first-level base-level-line">
+                        <li class="sidebar-item">
+                            <a href="relatorio-vendas.php" class="sidebar-link">
+                                <span class="hide-menu">Relatório de Vendas</span>
+                            </a>
                         </li>
-
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                                aria-expanded="false"><i data-feather="crosshair" class="feather-icon"></i><span
-                                    class="hide-menu">Multi
-                                    level
-                                    dd</span></a>
-                            <ul aria-expanded="false" class="collapse first-level base-level-line">
-                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
-                                            class="hide-menu"> item 1.1</span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
-                                            class="hide-menu"> item 1.2</span></a>
-                                </li>
-                                <li class="sidebar-item"> <a class="has-arrow sidebar-link" href="javascript:void(0)"
-                                        aria-expanded="false"><span class="hide-menu">Menu 1.3</span></a>
-                                    <ul aria-expanded="false" class="collapse second-level base-level-line">
-                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
-                                                    class="hide-menu"> item
-                                                    1.3.1</span></a></li>
-                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
-                                                    class="hide-menu"> item
-                                                    1.3.2</span></a></li>
-                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
-                                                    class="hide-menu"> item
-                                                    1.3.3</span></a></li>
-                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
-                                                    class="hide-menu"> item
-                                                    1.3.4</span></a></li>
-                                    </ul>
-                                </li>
-                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
-                                            class="hide-menu"> item
-                                            1.4</span></a></li>
-                            </ul>
+                        <li class="sidebar-item">
+                            <a href="relatorio-financeiro.php" class="sidebar-link">
+                                <span class="hide-menu">Relatório Financeiro</span>
+                            </a>
                         </li>
-                        <li class="list-divider"></li>
-                        <li class="nav-small-cap"><span class="hide-menu">Extra</span></li>
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="../../docs/docs.html"
-                                aria-expanded="false"><i data-feather="edit-3" class="feather-icon"></i><span
-                                    class="hide-menu">Documentation</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="authentication-login1.html"
-                                aria-expanded="false"><i data-feather="log-out" class="feather-icon"></i><span
-                                    class="hide-menu">Logout</span></a></li>
+                        <li class="sidebar-item">
+                            <a href="relatorio-produtos.php" class="sidebar-link">
+                                <span class="hide-menu">Relatório de Produtos</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="relatorio-clientes.php" class="sidebar-link">
+                                <span class="hide-menu">Relatório de Clientes</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Seção Configurações -->
+                <li class="list-divider"></li>
+                <li class="nav-small-cap"><span class="hide-menu">Configurações</span></li>
+                
+                <li class="sidebar-item">
+                    <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                        <i data-feather="settings" class="feather-icon"></i>
+                        <span class="hide-menu">Configurações</span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse first-level base-level-line">
+                        <li class="sidebar-item">
+                            <a href="config-empresa.php" class="sidebar-link">
+                                <span class="hide-menu">Dados da Empresa</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="usuarios.php" class="sidebar-link">
+                                <span class="hide-menu">Usuários</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="perfis-acesso.php" class="sidebar-link">
+                                <span class="hide-menu">Perfis de Acesso</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="backup.php" class="sidebar-link">
+                                <span class="hide-menu">Backup do Sistema</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Logout -->
+                <li class="list-divider"></li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link sidebar-link" href="logout.php" aria-expanded="false">
+                        <i data-feather="log-out" class="feather-icon"></i>
+                        <span class="hide-menu">Logout</span>
+                    </a>
+                </li>
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
@@ -525,7 +522,149 @@ if (!isset($_SESSION['usuario'])) {
                             </nav>
                         </div>
                     </div>
-                    <div class="col-5 align-self-center">
+                    <!-- APLICAR FILTROS -->
+
+                     <div class="col-5 align-self-center">
+                        <div class="customize-input float-right">
+                        <div class="d-flex align-items-center">
+
+                        <!-- Botão dropdown para filtros -->
+                        <div class="dropdown ml-2" id="filterDropdownContainer">
+                            <button class="btn btn-primary rounded-pill d-flex align-items-center px-3 custom-shadow" 
+                                    type="button" 
+                                    id="filterDropdown" 
+                                    data-toggle="dropdown" 
+                                    aria-haspopup="true" 
+                                    aria-expanded="false">
+                                <i data-feather="filter" class="feather-icon" style="width: 16px; height: 16px;"></i>
+                                <span class="ml-2">Filtros</span>
+                            </button>
+                            <div class="dropdown-menu p-3" aria-labelledby="filterDropdown" style="width: 250px;">
+                                <!-- Filtro por data -->
+                                <div class="form-group">
+                                    <label for="dateFilter" class="text-muted mb-1">Data</label>
+                                    <select class="form-control form-control-sm" id="dateFilter">
+                                        <option value="all">Todas as datas</option>
+                                        <option value="today">Hoje</option>
+                                        <option value="week">Última semana</option>
+                                        <option value="month">Último mês</option>
+                                        <option value="custom">Personalizado</option>
+                                    </select>
+                                </div>
+                                
+                                <!-- Filtro por categoria -->
+                                <div class="form-group">
+                                    <label for="categoryFilter" class="text-muted mb-1">Categoria</label>
+                                    <select class="form-control form-control-sm" id="categoryFilter">
+                                        <option value="all">Todas</option>
+                                        <option value="category1">Categoria 1</option>
+                                        <option value="category2">Categoria 2</option>
+                                        <option value="category3">Categoria 3</option>
+                                    </select>
+                                </div>
+                                
+                                <!-- Filtro por status -->
+                                <div class="form-group">
+                                    <label for="statusFilter" class="text-muted mb-1">Status</label>
+                                    <select class="form-control form-control-sm" id="statusFilter">
+                                        <option value="all">Todos</option>
+                                        <option value="active">Ativo</option>
+                                        <option value="inactive">Inativo</option>
+                                        <option value="pending">Pendente</option>
+                                    </select>
+                                </div>
+                                
+                                <!-- Botões de ação -->
+                                <div class="d-flex justify-content-between mt-3">
+                                    <button type="button" class="btn btn-light btn-sm" onclick="clearFilters()">Limpar</button>
+                                    <button type="button" class="btn btn-primary btn-sm" onclick="applyFilters()">Aplicar</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <i class="form-control-icon ml-2" data-feather="search"></i>
+                    </div>
+                        </div>
+                    </div>
+
+                    <style>
+.dropdown-menu {
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    font-size: 0.9rem;
+}
+
+.custom-shadow {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.btn-primary {
+    background-color: linear-gradient(135deg, #0a2463 0%, #247ba0 100%);
+    border-color: linear-gradient(135deg, #0a2463 0%, #247ba0 100%);
+}
+
+.btn-primary:hover {
+    background-color: linear-gradient(135deg, #0a2463 0%, #247ba0 100%);
+    border-color: linear-gradient(135deg, #0a2463 0%, #247ba0 100%);
+}
+
+.feather-icon {
+    stroke-width: 2.5px;
+}
+
+/* Adiciona uma classe para manter o dropdown aberto */
+.dropdown-menu.show {
+    display: block;
+}
+</style>
+
+<script>
+// Previne o fechamento do dropdown ao clicar dentro dele
+$(document).ready(function() {
+    $('#filterDropdownContainer .dropdown-menu').on('click', function(e) {
+        e.stopPropagation();
+    });
+});
+
+function clearFilters() {
+    document.getElementById('dateFilter').value = 'all';
+    document.getElementById('categoryFilter').value = 'all';
+    document.getElementById('statusFilter').value = 'all';
+}
+
+function applyFilters() {
+    const dateFilter = document.getElementById('dateFilter').value;
+    const categoryFilter = document.getElementById('categoryFilter').value;
+    const statusFilter = document.getElementById('statusFilter').value;
+    
+    // Aqui você pode implementar a lógica para aplicar os filtros
+    console.log('Filtros aplicados:', {
+        date: dateFilter,
+        category: categoryFilter,
+        status: statusFilter
+    });
+    
+    // Agora o dropdown só fechará quando clicar em "Aplicar"
+    $('#filterDropdownContainer .dropdown-menu').removeClass('show');
+    $('#filterDropdown').attr('aria-expanded', 'false');
+}
+
+// Certifique-se de que o Feather Icons seja inicializado
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof feather !== 'undefined') {
+        feather.replace();
+    }
+});
+</script>
+
+                     <!-- <div class="col-5 align-self-center">
                         <div class="customize-input float-right">
                             <select class="custom-select custom-select-set form-control bg-white border-0 custom-shadow custom-radius">
                                 <option selected>Aug 19</option>
@@ -533,7 +672,7 @@ if (!isset($_SESSION['usuario'])) {
                                 <option value="2">Jun 19</option>
                             </select>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <!-- ============================================================== -->
