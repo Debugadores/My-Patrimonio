@@ -217,7 +217,7 @@ if (!isset($_SESSION['usuario'])) {
                         <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             <img src="../assets/images/users/profile-pic.jpg" alt="user" class="rounded-circle" width="40">
-                            <span class="ml-2 d-none d-lg-inline-block"><span>Hello,</span> 
+                            <span class="ml-2 d-none d-lg-inline-block"><span>Olá, </span> 
                                 <span class="text-dark">
                                     <?php 
                                         // Inicie a sessão e exiba o nome do usuário logado
@@ -232,24 +232,24 @@ if (!isset($_SESSION['usuario'])) {
                             <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
                                 <a class="dropdown-item" href="javascript:void(0)"><i data-feather="user"
                                         class="svg-icon mr-2 ml-1"></i>
-                                    My Profile</a>
+                                    Meu Perfil</a>
                                 <a class="dropdown-item" href="javascript:void(0)"><i data-feather="credit-card"
                                         class="svg-icon mr-2 ml-1"></i>
-                                    My Balance</a>
+                                    Meu Saldo</a>
                                 <a class="dropdown-item" href="javascript:void(0)"><i data-feather="mail"
                                         class="svg-icon mr-2 ml-1"></i>
-                                    Inbox</a>
+                                    Caixa de Entrada</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="javascript:void(0)"><i data-feather="settings"
                                         class="svg-icon mr-2 ml-1"></i>
-                                    Account Setting</a>
+                                    Configuração da Conta</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="../../../../logout.php"><i data-feather="power"
                                         class="svg-icon mr-2 ml-1"></i>
-                                    Logout</a>
+                                    Sair</a>
                                 <div class="dropdown-divider"></div>
                                 <div class="pl-4 p-3"><a href="javascript:void(0)" class="btn btn-sm btn-info">View
-                                        Profile</a></div>
+                                    Perfil</a></div>
                             </div>
                         </li>
                         <!-- ============================================================== -->
