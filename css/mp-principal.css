@@ -1,0 +1,139 @@
+:root {
+    --primary-color: #51b5e0;
+    --light-gray: #f8f9fa;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #111861 0%, #0b4090 100%);
+    color: white;
+}
+
+.top-toolbar {
+    background-color: var(--light-gray);
+    border-bottom: 1px solid #dee2e6;
+    padding: 4px;
+}
+
+.toolbar-btn {
+    padding: 4px 8px;
+    background: white;
+    border: 1px solid #dee2e6;
+    margin-right: 2px;
+    border-radius: 3px;
+}
+
+.toolbar-btn:hover {
+    background: #e9ecef;
+}
+
+.main-tabs {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px 8px 0 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-tabs .nav-link {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    margin-right: 2px;
+    border-radius: 3px 3px 0 0;
+    font-size: 0.875rem;
+    padding: 6px 12px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-tabs .nav-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-tabs .nav-link.active {
+    background: rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: none;
+    z-index: 1000;
+    min-width: 200px;
+    color: #333;
+    padding: 8px 0;
+}
+
+.submenu-item {
+    padding: 8px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.submenu-item:hover {
+    background: rgba(0,0,0,0.05);
+}
+
+.submenu-group {
+    border-bottom: 1px solid #eee;
+    padding: 8px 0;
+}
+
+.submenu-group:last-child {
+    border-bottom: none;
+}
+
+.submenu-title {
+    padding: 4px 16px;
+    font-size: 0.75rem;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.content-area {
+    padding: 20px;
+    height: calc(100vh - 110px);
+    color: white;
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 4px 8px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.icon-btn {
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab-with-submenu {
+    position: relative;
+}
+
+.submenu.show {
+    display: block;
+}
