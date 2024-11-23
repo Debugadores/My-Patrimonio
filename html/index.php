@@ -606,13 +606,13 @@ if (!isset($_SESSION['usuario'])) {
 }
 
 .btn-primary {
-    background-color: linear-gradient(135deg, #0a2463 0%, #247ba0 100%);
-    border-color: linear-gradient(135deg, #0a2463 0%, #247ba0 100%);
+    background-color: #0a2463;
+    border-color: #0a2364;
 }
 
 .btn-primary:hover {
-    background-color: linear-gradient(135deg, #0a2463 0%, #247ba0 100%);
-    border-color: linear-gradient(135deg, #0a2463 0%, #247ba0 100%);
+    background-color: #247ba0;
+    border-color: #247ba0;
 }
 
 .feather-icon {
