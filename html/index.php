@@ -289,12 +289,12 @@ if (!isset($_SESSION['usuario'])) {
                     </a>
                     <ul aria-expanded="false" class="collapse first-level base-level-line">
                         <li class="sidebar-item">
-                            <a href="cadastro-cliente.php" class="sidebar-link">
+                            <a href="mp-cadastro-cliente.php" class="sidebar-link">
                                 <span class="hide-menu">Novo Cliente</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="lista-clientes.php" class="sidebar-link">
+                            <a href="mp-lista-clientes.php" class="sidebar-link">
                                 <span class="hide-menu">Lista de Clientes</span>
                             </a>
                         </li>

@@ -6239,13 +6239,13 @@ a.btn.disabled,fieldset:disabled a.btn{
 }
 .btn-primary{
     color:#fff;
-    background-color:#5f76e8;
-    border-color:#5f76e8
+    background-color:#0a2463;
+    border-color:#0a2463
 }
 .btn-primary:hover{
     color:#fff;
-    background-color:#3e59e3;
-    border-color:#3250e2
+    background-color:#247ba0;
+    border-color:#247ba0
 }
 .btn-primary.disabled,.btn-primary:disabled{
     color:#fff;
