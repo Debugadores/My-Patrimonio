@@ -119,45 +119,6 @@
                 <span class="help-block text-danger"><?= $confirm_password_err; ?></span>
             </div>
 
-            <!-- Campo Telefone -->
-            <div class="mb-1">
-                <label class="form-label">TELEFONE</label>
-                <div class="row g-2">
-                    <div class="col-5 col-sm-12">
-                        <span class="help-block text-danger"><?= $telefone_err; ?></span>
-                        <div class="input-group <?= (!empty($telefone_err)) ? 'has-error' : ''; ?>">
-                            <input type="text" 
-                                name="telefone" 
-                                class="form-control" 
-                                id="telefone" 
-                                placeholder="Informe seu telefone..." 
-                                value="<?= $telefone; ?>"
-                                required>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Campo Genero -->
-            <div class="mb-1">
-                <label class="form-label">GÊNERO</label>
-                <div class="row g-2">
-                    <div class="col-5 col-sm-12">
-                        <span class="help-block text-danger"><?= $genero_err; ?></span>
-                        <div class="input-group <?= (!empty($genero_err)) ? 'has-error' : ''; ?>">
-                            <select class="form-control" 
-                                    id="genero" 
-                                    name="genero" 
-                                    required>
-                                <option value="">Selecione o gênero...</option>
-                                <option value="Masculino" <?= ($genero == "Masculino") ? "selected" : ""; ?>>Masculino</option>
-                                <option value="Feminino" <?= ($genero == "Feminino") ? "selected" : ""; ?>>Feminino</option>
-                                <option value="Outro" <?= ($genero == "Outro") ? "selected" : ""; ?>>Outro</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="links">
                 <div class="forgot-password">   
                 </div>

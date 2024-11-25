@@ -1,7 +1,7 @@
 <?php
 // Defina variáveis ​​e inicialize com valores vazios
-$email = $password = $confirm_password = $usuario = $nome = "";
-$email_err = $password_err = $confirm_password_err = $usuario_err = $nome_err = "";
+$email = $password = $confirm_password = $usuario = $telefone = $genero = $nome = "";
+$email_err = $password_err = $confirm_password_err = $usuario_err = $telefone_err = $genero_err = $nome_err = "";
 
 // Processando dados do formulário quando o formulário é enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email_err = "Por favor, insira um endereço de e-mail.";
     } else {
         // Prepare uma declaração selecionada
-        $sql = "SELECT codigo FROM usuarios WHERE email = ?";
+        $sql = "SELECT id FROM users WHERE email = ?";
 
         if ($stmt = mysqli_prepare($conection_db, $sql)) {
             // Vincule variáveis ​​à instrução preparada como parâmetros
@@ -78,7 +78,7 @@ if (empty(trim($_POST["usuario"]))) {
     $usuario_err = "Por favor, insira um nome de usuário.";
 } else {
     // Prepare uma declaração selecionada
-    $sql = "SELECT codigo FROM usuarios WHERE usuario = ?";
+    $sql = "SELECT id FROM users WHERE usuario = ?";
     
     if ($stmt = mysqli_prepare($conection_db, $sql)) {
         // Vincule variáveis à instrução preparada como parâmetros
@@ -103,22 +103,40 @@ if (empty(trim($_POST["usuario"]))) {
     }
 }
 
+    // Validar telefone
+    if (empty(trim($_POST["telefone"]))) {
+        $telefone_err = "Por favor, insira um telefone.";
+    } elseif (!preg_match('/^\d{10,15}$/', trim($_POST["telefone"]))) {
+        $telefone_err = "Número de telefone inválido.";
+    } else {
+        $telefone = trim($_POST["telefone"]);
+    }
+
+    // Validar gênero
+    if (empty(trim($_POST["genero"]))) {
+        $genero_err = "Selecione um gênero.";
+    } else {
+        $genero = trim($_POST["genero"]);
+    }
+
     // Verifique os erros de entrada antes de inserir no banco de dados
     if (empty($nome_err) && empty($email_err) && empty($password_err) && empty($confirm_password_err)
-        && empty($usuario_err)) {
+        && empty($usuario_err) && empty($telefone_err) && empty($genero_err)) {
 
         // Prepare uma instrução de inserção
-        $sql = "INSERT INTO usuarios (nome, email, senha, usuario) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO users (nome, email, password, usuario, telefone, genero) VALUES (?, ?, ?, ?, ?, ?)";
 
         if ($stmt = mysqli_prepare($conection_db, $sql)) {
             // Vincule variáveis ​​à instrução preparada como parâmetros
-            mysqli_stmt_bind_param($stmt, "ssss", $param_nome, $param_email, $param_password, $param_usuario);
+            mysqli_stmt_bind_param($stmt, "ssssss", $param_nome, $param_email, $param_password, $param_usuario, $param_telefone, $param_genero);
 
             // Definir parâmetros
             $param_nome = $nome;
             $param_email = $email;
             $param_password = password_hash($password, PASSWORD_DEFAULT);
             $param_usuario = $usuario;
+            $param_telefone = $telefone;
+            $param_genero = $genero;
 
             // Tentativa de executar a instrução preparada
             if (mysqli_stmt_execute($stmt)) {

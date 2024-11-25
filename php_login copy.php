@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 if (mysqli_stmt_num_rows($stmt_empresa) == 1) {
                     // Código da empresa válido, verificar usuário e senha
-                    $sql_user = "SELECT codigo, usuario, senha FROM usuarios WHERE usuario = ?";
+                    $sql_user = "SELECT id, usuario, password FROM users WHERE usuario = ?";
                     if ($stmt_user = mysqli_prepare($conection_db, $sql_user)) {
                         mysqli_stmt_bind_param($stmt_user, "s", $param_usuario);
                         $param_usuario = $usuario;
@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         // Login bem-sucedido
                                         session_start();
                                         $_SESSION["loggedin"] = true;
-                                        $_SESSION["codigo"] = $id;
+                                        $_SESSION["id"] = $id;
                                         $_SESSION["usuario"] = $usuario;
 
                                         // Redirecionar para a página principal

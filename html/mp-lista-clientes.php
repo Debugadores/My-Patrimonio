@@ -17,8 +17,8 @@ if (!isset($_SESSION['usuario'])) {
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>MyPatrimonio | Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="login/assets/img/favicon/logo.ico">
+    <title>MyPatrimonio | Consulta de Clientes</title>
     <!-- Custom CSS -->
     <link href="../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
     <link href="../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
@@ -516,7 +516,7 @@ if (!isset($_SESSION['usuario'])) {
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Lista de Clientes</h4>
+                                <h4 class="card-title">Consulta de Clientes</h4>
                                 <!--<h6 class="card-subtitle">On a per-column basis (i.e. order by a specific column and
                                     then a secondary column if the data in the first column is identical), through the
                                     <code> columns.orderData</code> option.</h6>-->
@@ -529,10 +529,13 @@ if (!isset($_SESSION['usuario'])) {
                                                 <th>Nome/Razão Social</th>
                                                 <th>Telefone</th>
                                                 <th>CPF/CNPJ</th>
+                                                <th>RG/IE</th>
                                                 <th>Cidade</th>
                                                 <th>Tipo</th>
-                                                <th>Data de Nascimento</th>
+                                                <th>Data Nascimento</th>
+                                                <th>Gênero</th>
                                                 <th>Status</th>
+                                                <th>Ação</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -541,20 +544,26 @@ if (!isset($_SESSION['usuario'])) {
                                                 <td>Consumidor</td>
                                                 <td>(00) 00000-0000</td>
                                                 <td></td>
+                                                <td></td>
                                                 <td>Quedas do Iguaçu</td>
                                                 <td>Pessoa Física</td>
                                                 <td>24/11/2004</td>
+                                                <td></td>
                                                 <td>Ativo</td>
+                                                <td></td>
                                             </tr>
                                             <tr>
                                                 <td>2</td>
                                                 <td>Administrador</td>
                                                 <td>(00) 00000-0000</td>
                                                 <td>111.111.111-11</td>
+                                                <td>11.111.111-9</td>
                                                 <td>Quedas do Iguaçu</td>
                                                 <td>Pessoa Física</td>
                                                 <td>24/11/2004</td>
+                                                <td>Masculino</td>
                                                 <td>Ativo</td>
+                                                <td></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -571,24 +580,24 @@ if (!isset($_SESSION['usuario'])) {
         </div>
     </div>
     <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
-<script src="../assets/libs/popper.js/dist/umd/popper.min.js"></script>
-<script src="../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../dist/js/app-style-switcher.js"></script>
-<script src="../dist/js/feather.min.js"></script>
-<script src="../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-<script src="../dist/js/sidebarmenu.js"></script>
-<script src="../dist/js/custom.min.js"></script>
-<!-- Extras -->
-<script src="../assets/extra-libs/c3/d3.min.js"></script>
-<script src="../assets/extra-libs/c3/c3.min.js"></script>
-<script src="../assets/libs/chartist/dist/chartist.min.js"></script>
-<script src="../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
-<script src="../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
-<script src="../assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
-<script src="../dist/js/pages/dashboards/dashboard1.min.js"></script>
-<script src="../assets/extra-libs/sparkline/sparkline.js"></script>
-<script src="../assets/extra-libs/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="../dist/js/pages/datatable/datatable-basic.init.js"></script>
+    <script src="../assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../dist/js/app-style-switcher.js"></script>
+    <script src="../dist/js/feather.min.js"></script>
+    <script src="../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../dist/js/sidebarmenu.js"></script>
+    <script src="../dist/js/custom.min.js"></script>
+    <!-- Extras -->
+    <script src="../assets/extra-libs/c3/d3.min.js"></script>
+    <script src="../assets/extra-libs/c3/c3.min.js"></script>
+    <script src="../assets/libs/chartist/dist/chartist.min.js"></script>
+    <script src="../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+    <script src="../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="../assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="../dist/js/pages/dashboards/dashboard1.min.js"></script>
+    <script src="../assets/extra-libs/sparkline/sparkline.js"></script>
+    <script src="../assets/extra-libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../dist/js/pages/datatable/datatable-basic.init.js"></script>
 
     
 </body>

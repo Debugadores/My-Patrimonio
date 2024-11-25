@@ -121,41 +121,6 @@ INSERT INTO `empresas` VALUES
 UNLOCK TABLES;
 
 --
--- Table structure for table `users`
---
-
-DROP TABLE IF EXISTS `users`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `Nome` varchar(100) NOT NULL,
-  `usuario` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `telefone` varchar(15) DEFAULT NULL,
-  `genero` varchar(10) DEFAULT NULL,
-  `status` varchar(10) DEFAULT 'Ativo',
-  `created_at` datetime DEFAULT current_timestamp(),
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `usuario` (`usuario`),
-  UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `users`
---
-
-LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES
-(1,'Rafael Zenruths','Zenruths','rafaelzenruths@gmail.com','$2y$10$rtmVrli5uYfn9wnsMuN.jO.qiuwCPl9w8zK/T4YlmYqop5QneVity','47999112233','Masculino','Ativo','2024-02-18 23:27:06'),
-(5,'Edson Pillareck','Didi','pillareck@live.com','$2y$10$BvIyHIcK7GaeMhmul3JXD.dsrKDFxMEcXIw2ksvFEhcmCOr4trqd2','46999111111','Masculino','Ativo','2024-11-18 13:44:52');
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `usuarios`
 --
 
@@ -164,8 +129,15 @@ DROP TABLE IF EXISTS `usuarios`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `usuarios` (
   `Codigo` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`Codigo`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+  `Nome` varchar(100) NOT NULL,
+  `Usuario` varchar(30) NOT NULL,
+  `Senha` varchar(255) NOT NULL,
+  `Email` varchar(70) NOT NULL,
+  `Status` varchar(10) DEFAULT 'Ativo',
+  `DataHoraCriacao` datetime DEFAULT current_timestamp(),
+  PRIMARY KEY (`Codigo`),
+  KEY `Usuario` (`Usuario`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -174,6 +146,9 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
+INSERT INTO `usuarios` VALUES
+(1,'Rafael Zenruths','Zenruths','$2y$10$XyDXuseuzeuDm1s.aY/sJ.r3GFStJ3Lfa4Zq0qkkUVYQJFd8jgIXu','rafaelzenruths@gmail.com','Ativo','2024-11-25 11:34:33'),
+(2,'Edson Pillareck','Didi','$2y$10$u.OBBV76MLWRbm5iXimAU.QswpTt2z.Lm./Eg7CXPNmWwvXRxUJ6K','pillareck@live.com','Ativo','2024-11-25 11:45:20');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -195,11 +170,7 @@ CREATE TABLE `usuarios_perfil` (
   `RG` varchar(20) DEFAULT NULL,
   `Status` varchar(10) DEFAULT NULL,
   `DataNascimento` date DEFAULT NULL,
-  PRIMARY KEY (`Codigo`),
-  UNIQUE KEY `CodigoUsuario` (`CodigoUsuario`,`NomeUsuario`),
-  KEY `NomeUsuario` (`NomeUsuario`),
-  CONSTRAINT `usuarios_perfil_ibfk_1` FOREIGN KEY (`CodigoUsuario`) REFERENCES `users` (`id`) ON DELETE CASCADE,
-  CONSTRAINT `usuarios_perfil_ibfk_2` FOREIGN KEY (`NomeUsuario`) REFERENCES `users` (`usuario`) ON DELETE CASCADE
+  PRIMARY KEY (`Codigo`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -209,9 +180,6 @@ CREATE TABLE `usuarios_perfil` (
 
 LOCK TABLES `usuarios_perfil` WRITE;
 /*!40000 ALTER TABLE `usuarios_perfil` DISABLE KEYS */;
-INSERT INTO `usuarios_perfil` VALUES
-(1,1,'Zenruths',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-(2,5,'Didi',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `usuarios_perfil` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -224,4 +192,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-25  0:49:06
+-- Dump completed on 2024-11-25 11:50:50

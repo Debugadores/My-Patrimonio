@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         // Login bem-sucedido
                                         session_start();
                                         $_SESSION["loggedin"] = true;
-                                        $_SESSION["codigo"] = $id;
+                                        $_SESSION["id"] = $id;
                                         $_SESSION["usuario"] = $usuario;
 
                                         // Redirecionar para a página principal

@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Continuar validação se não houver erros
     if (empty($empresaCodigo_err) && empty($usuario_err) && empty($password_err)) {
         // Verificar o código da empresa
-        $sql_empresa = "SELECT codigo FROM empresas WHERE codigo = ?";
+        $sql_empresa = "SELECT Codigo FROM empresas WHERE Codigo = ?";
         if ($stmt_empresa = mysqli_prepare($conection_db, $sql_empresa)) {
             mysqli_stmt_bind_param($stmt_empresa, "s", $empresaCodigo);
 
@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 if (mysqli_stmt_num_rows($stmt_empresa) == 1) {
                     // Código da empresa válido, verificar usuário e senha
-                    $sql_user = "SELECT id, usuario, password, nome FROM users WHERE usuario = ?";
+                    $sql_user = "SELECT codigo, usuario, senha, nome FROM usuarios WHERE usuario = ?";
                     if ($stmt_user = mysqli_prepare($conection_db, $sql_user)) {
                         mysqli_stmt_bind_param($stmt_user, "s", $usuario);
 
@@ -59,13 +59,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                             if (mysqli_stmt_num_rows($stmt_user) == 1) {
                                 // Verificar senha
-                                mysqli_stmt_bind_result($stmt_user, $id, $db_usuario, $hashed_password, $nome);
+                                mysqli_stmt_bind_result($stmt_user, $codigo, $db_usuario, $hashed_password, $nome);
                                 if (mysqli_stmt_fetch($stmt_user)) {
                                     if (password_verify($password, $hashed_password)) {
                                         // Login bem-sucedido
-                                        session_start();
                                         $_SESSION["loggedin"] = true;
-                                        $_SESSION["id"] = $id;
+                                        $_SESSION["codigo"] = $codigo;
                                         $_SESSION["usuario"] = $db_usuario;
                                         $_SESSION["empresaCodigo"] = $empresaCodigo;
                                         $_SESSION["nome"] = $nome;
@@ -98,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 if(isset($_GET['action']) && $_GET['action'] == 'buscarEmpresa') {
     $codigo = trim($_GET['codigo']);
     
-    $sql = "SELECT razaosocial FROM empresas WHERE codigo = ?";
+    $sql = "SELECT RazaoSocial FROM empresas WHERE Codigo = ?";
     if($stmt = mysqli_prepare($conection_db, $sql)) {
         mysqli_stmt_bind_param($stmt, "s", $codigo);
         
@@ -125,7 +124,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'buscarEmpresa') {
 if(isset($_GET['action']) && $_GET['action'] == 'buscarUsuario') {
     $usuario = trim($_GET['usuario']);
     
-    $sql = "SELECT nome FROM users WHERE usuario = ?";
+    $sql = "SELECT Nome FROM usuarios WHERE Usuario = ?";
     if($stmt = mysqli_prepare($conection_db, $sql)) {
         mysqli_stmt_bind_param($stmt, "s", $usuario);
         
