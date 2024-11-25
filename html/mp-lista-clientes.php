@@ -346,7 +346,7 @@ if (!isset($_SESSION['usuario'])) {
                 <li class="sidebar-item">
                     <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
                         <i data-feather="package" class="feather-icon"></i>
-                        <span class="hide-menu">Produtos</span>
+                        <span class="hide-menu">Patrimônios</span>
                     </a>
                     <ul aria-expanded="false" class="collapse first-level base-level-line">
                         <li class="sidebar-item">
