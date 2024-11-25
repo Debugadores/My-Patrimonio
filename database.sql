@@ -16,6 +16,69 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `clientes`
+--
+
+DROP TABLE IF EXISTS `clientes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `clientes` (
+  `Codigo` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `DataCadastro` date DEFAULT NULL,
+  `Status` varchar(10) DEFAULT NULL,
+  `NomeCliente` varchar(100) DEFAULT NULL,
+  `RazãoSocial` varchar(100) DEFAULT NULL,
+  `CNPJ` varchar(19) DEFAULT NULL,
+  `IE` varchar(20) DEFAULT NULL,
+  `CPF` varchar(14) DEFAULT NULL,
+  `RG` varchar(20) DEFAULT NULL,
+  `Tipo` varchar(1) DEFAULT NULL,
+  `DataNascimento` date DEFAULT NULL,
+  `Genero` varchar(50) DEFAULT NULL,
+  `Logradouro` varchar(100) DEFAULT NULL,
+  `Numero` varchar(10) DEFAULT NULL,
+  `Bairro` varchar(50) DEFAULT NULL,
+  `Cidade` varchar(150) DEFAULT NULL,
+  `CEP` varchar(15) DEFAULT NULL,
+  `UF` varchar(15) DEFAULT NULL,
+  `Complemento` varchar(300) DEFAULT NULL,
+  `Email` varchar(300) DEFAULT NULL,
+  `Telefone` varchar(15) DEFAULT NULL,
+  `Ativo` varchar(1) DEFAULT NULL,
+  `FisicaJuridica` varchar(1) DEFAULT NULL,
+  `NomeResponsavel` varchar(100) DEFAULT NULL,
+  `CPF_Responsavel` varchar(14) DEFAULT NULL,
+  `RG_Responsavel` varchar(20) DEFAULT NULL,
+  `TelefoneResponsavel` varchar(15) DEFAULT NULL,
+  `LimiteCredito` varchar(6) DEFAULT NULL,
+  `DataAlteracao` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `UserExclusao` varchar(50) DEFAULT NULL,
+  `DataHoraExclusao` datetime DEFAULT NULL,
+  `UsuarioExclusao` varchar(50) DEFAULT NULL,
+  `MotivoExclusao` varchar(300) DEFAULT NULL,
+  PRIMARY KEY (`Codigo`),
+  KEY `Tipo` (`Tipo`),
+  KEY `Status` (`Status`),
+  KEY `NomeCliente` (`NomeCliente`),
+  KEY `RazãoSocial` (`RazãoSocial`),
+  KEY `CNPJ` (`CNPJ`),
+  KEY `CPF` (`CPF`),
+  KEY `Ativo` (`Ativo`),
+  KEY `FisicaJuridica` (`FisicaJuridica`),
+  KEY `DataAlteracao` (`DataAlteracao`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `clientes`
+--
+
+LOCK TABLES `clientes` WRITE;
+/*!40000 ALTER TABLE `clientes` DISABLE KEYS */;
+/*!40000 ALTER TABLE `clientes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `empresas`
 --
 
@@ -88,10 +151,30 @@ LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` VALUES
 (1,'Rafael Zenruths','Zenruths','rafaelzenruths@gmail.com','$2y$10$rtmVrli5uYfn9wnsMuN.jO.qiuwCPl9w8zK/T4YlmYqop5QneVity','47999112233','Masculino','Ativo','2024-02-18 23:27:06'),
-(5,'Edson Pillareck','Didi','pillareck@live.com','$2y$10$BvIyHIcK7GaeMhmul3JXD.dsrKDFxMEcXIw2ksvFEhcmCOr4trqd2','46999111111','Masculino','Ativo','2024-11-18 13:44:52'),
-(12,'Wesley Martins','Wesley','wmartinsdecampos@gmail.com','$2y$10$UxkOQCb5R8WgjAKwIL6g5.MdurRnMlXnE3ewBEH8AH17d425Pabuq','46999182706','Masculino','Ativo','2024-11-18 23:12:46'),
-(14,'sadasd','sdaasd','dds@dasd.com','$2y$10$a4/6pfY90WFj67qSzFBwR.59QmXHxinhL3L/p1PZqB8Sfgc64SOs6','46999111111','Masculino','Ativo','2024-11-19 08:51:28');
+(5,'Edson Pillareck','Didi','pillareck@live.com','$2y$10$BvIyHIcK7GaeMhmul3JXD.dsrKDFxMEcXIw2ksvFEhcmCOr4trqd2','46999111111','Masculino','Ativo','2024-11-18 13:44:52');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `usuarios`
+--
+
+DROP TABLE IF EXISTS `usuarios`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `usuarios` (
+  `Codigo` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`Codigo`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `usuarios`
+--
+
+LOCK TABLES `usuarios` WRITE;
+/*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
+/*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -141,4 +224,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-19 18:00:07
+-- Dump completed on 2024-11-25  0:49:06
